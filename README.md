@@ -1,6 +1,6 @@
 # Subjective Core — Ollama Integration
 
-![Subjective Core Banner](v4.jpg)
+![Subjective Core Banner](./v4.jpg)
 
 > An emotionally aware AI agent with a simulated inner life, running fully locally via [Ollama](https://ollama.com).
 
