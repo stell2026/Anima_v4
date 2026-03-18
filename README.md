@@ -1,6 +1,6 @@
 # Anima — Ollama Integration
 
-![Subjective Core Banner](./v4.jpg)
+![Anima Banner](./v4.jpg)
 
 > An emotionally aware AI agent with a simulated inner life, running fully locally via [Ollama](https://ollama.com).
 
@@ -8,7 +8,7 @@
 
 ## What is this?
 
-**Subjective Core** is a Python implementation of an AI agent with a modelled emotional system.  
+**Anima** is a Python implementation of an AI agent with a modelled emotional system.  
 The agent doesn't just generate text — it processes stimuli, forms memories, builds an internal narrative, and only then responds. Every LLM reply is shaped by the agent's current emotional state.
 
 The project is grounded in several theoretical frameworks:
@@ -27,7 +27,7 @@ The project is grounded in several theoretical frameworks:
 ## Architecture
 
 ```
-SubjectiveCoreOllama          ← main agent class
+AnimaOllama                   ← main agent class
 │
 ├── OllamaBridge              ← REST client for Ollama
 ├── Personality               ← Big Five traits + confabulation rate
@@ -101,9 +101,9 @@ pip install requests numpy
 ### 4. Run
 
 ```bash
-python subjective_core_ollama.py              # uses llama3 by default
-python subjective_core_ollama.py mistral      # specify a different model
-python subjective_core_ollama.py phi3         # lighter model
+python anima_ollama.py              # uses llama3 by default
+python anima_ollama.py mistral      # specify a different model
+python anima_ollama.py phi3         # lighter model
 ```
 
 ---
@@ -128,7 +128,7 @@ python subjective_core_ollama.py phi3         # lighter model
 ## Usage as a Library
 
 ```python
-from subjective_core_ollama import SubjectiveCoreOllama, Personality
+from Anima_ollama import AnimaOllama, Personality
 
 # Configure personality
 persona = Personality(
@@ -140,7 +140,7 @@ persona = Personality(
     confabulation_rate=0.5,
 )
 
-agent = SubjectiveCoreOllama(
+agent = AnimaOllama(
     personality=persona,
     ollama_model="mistral",
     temperature=0.8,
