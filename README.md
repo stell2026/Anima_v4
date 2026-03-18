@@ -128,7 +128,7 @@ python anima_ollama.py phi3         # lighter model
 ## Usage as a Library
 
 ```python
-from Anima_ollama import AnimaOllama, Personality
+from anima_ollama import animaOllama, Personality
 
 # Configure personality
 persona = Personality(
