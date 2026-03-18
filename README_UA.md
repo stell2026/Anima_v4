@@ -101,9 +101,9 @@ pip install requests numpy
 ### 4. Запустити
 
 ```bash
-python Anima_ollama.py              # використовує llama3
-python Anima_ollama.py mistral      # вказати іншу модель
-python Anima_ollama.py phi3         # легша модель
+python anima_ollama.py              # використовує llama3
+python anima_ollama.py mistral      # вказати іншу модель
+python anima_ollama.py phi3         # легша модель
 ```
 
 ---
