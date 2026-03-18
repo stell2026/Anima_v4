@@ -1,4 +1,4 @@
-# Subjective Core — Ollama Integration
+# Anima — Ollama Integration
 
 ![Subjective Core Banner](./v4.jpg)
 
