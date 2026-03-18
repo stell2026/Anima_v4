@@ -1,14 +1,14 @@
 """
 ╔══════════════════════════════════════════════════════════════════╗
-║       SUBJECTIVE CORE v4  —  OLLAMA ІНТЕГРАЦІЯ                  ║
+║                Anima v4  —  OLLAMA ІНТЕГРАЦІЯ                    ║
 ║                                                                  ║
 ║  Як запустити:                                                   ║
 ║    1. Встановити Ollama: https://ollama.com                      ║
 ║    2. Завантажити модель: ollama pull llama3  (або mistral,      ║
-║                           gemma2, phi3, qwen2.5 тощо)           ║
+║                           gemma2, phi3, qwen2.5 тощо)            ║
 ║    3. pip install requests numpy                                 ║
-║    4. python subjective_core_ollama.py                           ║
-║    5. (опційно) python subjective_core_ollama.py mistral         ║
+║    4. python anima_ollama.py                                     ║
+║    5. (опційно) anima_ollama.py mistral                          ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 Архітектура:
@@ -21,7 +21,7 @@
   PredictiveProcessor   — предиктивна обробка та вільна енергія
   HomeostaticDrive      — гомеостатичні потяги та потреби
   ExistentialNarrative  — генератор внутрішнього нарративу
-  SubjectiveCoreOllama  — головний клас агента
+  AnimaOllama           — головний клас агента
 """
 
 import numpy as np
@@ -144,7 +144,7 @@ class OllamaBridge:
         Будує системний промпт, що кодує поточний емоційний стан агента.
 
         Args:
-            state (Dict):          результат SubjectiveCoreOllama.experience()
+            state (Dict):          результат AnimaOllama.experience()
             personality (Personality): риси особистості агента
             memories (List[MemoryTrace]): нещодавні спогади
 
@@ -638,7 +638,7 @@ class ExistentialNarrative:
 # ГОЛОВНИЙ КЛАС
 # ══════════════════════════════════════════════════════════════════
 
-class SubjectiveCoreOllama:
+class AnimaOllama:
     """
     Емоційний агент із суб'єктивним ядром та Ollama LLM.
 
@@ -970,7 +970,7 @@ def interactive_chat(model: str = "llama3") -> None:
         model (str): назва Ollama моделі
     """
     print("╔══════════════════════════════════════════════════════════════════╗")
-    print("║         SUBJECTIVE CORE  —  OLLAMA ІНТЕРАКТИВНИЙ ЧАТ           ║")
+    print("║         Anima  —  OLLAMA ІНТЕРАКТИВНИЙ ЧАТ           ║")
     print(f"║  Модель: {model:<55}║")
     print("╚══════════════════════════════════════════════════════════════════╝\n")
 
@@ -979,7 +979,7 @@ def interactive_chat(model: str = "llama3") -> None:
         agreeableness=0.7, conscientiousness=0.5,
         openness=0.8, confabulation_rate=0.6,
     )
-    agent = SubjectiveCoreOllama(
+    agent = AnimaOllama(
         personality=persona,
         ollama_model=model,
         temperature=0.75,
