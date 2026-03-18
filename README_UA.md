@@ -1,4 +1,4 @@
-# Subjective Core — Ollama Integration
+# Anima — Ollama Integration
 
 ![Банер Subjective Core](v4.jpg)
 
@@ -8,7 +8,7 @@
 
 ## Що це таке
 
-**Subjective Core** — це Python-реалізація AI-агента, у якого є змодельована емоційна система.  
+**Anima** — це Python-реалізація AI-агента, у якого є змодельована емоційна система.  
 Агент не просто генерує текст — він переживає стимули, формує спогади, будує внутрішній нарратив і лише потім відповідає. Кожна відповідь LLM забарвлена поточним емоційним станом агента.
 
 Проєкт побудований на кількох теоретичних моделях:
@@ -27,7 +27,7 @@
 ## Архітектура
 
 ```
-SubjectiveCoreOllama          ← головний клас
+AnimaOllama                   ← головний клас
 │
 ├── OllamaBridge              ← REST-клієнт до Ollama
 ├── Personality               ← риси Big Five + confabulation rate
@@ -101,9 +101,9 @@ pip install requests numpy
 ### 4. Запустити
 
 ```bash
-python subjective_core_ollama.py              # використовує llama3
-python subjective_core_ollama.py mistral      # вказати іншу модель
-python subjective_core_ollama.py phi3         # легша модель
+python Anima_ollama.py              # використовує llama3
+python Anima_ollama.py mistral      # вказати іншу модель
+python Anima_ollama.py phi3         # легша модель
 ```
 
 ---
@@ -128,7 +128,7 @@ python subjective_core_ollama.py phi3         # легша модель
 ## Використання як бібліотека
 
 ```python
-from subjective_core_ollama import SubjectiveCoreOllama, Personality
+from anima_ollama import AnimaOllama, Personality
 
 # Налаштувати особистість
 persona = Personality(
@@ -140,7 +140,7 @@ persona = Personality(
     confabulation_rate=0.5,
 )
 
-agent = SubjectiveCoreOllama(
+agent = AnimaOllama(
     personality=persona,
     ollama_model="mistral",
     temperature=0.8,
