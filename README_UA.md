@@ -1,7 +1,5 @@
 # Anima — Ollama Integration
 
-![Банер Subjective Core](v4.jpg)
-
 > Емоційний AI-агент з суб'єктивним внутрішнім станом, що працює повністю локально через [Ollama](https://ollama.com).
 
 ---
