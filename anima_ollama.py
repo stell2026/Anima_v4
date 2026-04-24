@@ -970,8 +970,8 @@ def interactive_chat(model: str = "llama3") -> None:
         model (str): назва Ollama моделі
     """
     print("╔══════════════════════════════════════════════════════════════════╗")
-    print("║         Anima  —  OLLAMA ІНТЕРАКТИВНИЙ ЧАТ           ║")
-    print(f"║  Модель: {model:<55}║")
+    print("║         Anima  —  OLLAMA ІНТЕРАКТИВНИЙ ЧАТ                       ║")
+    print(f"║  Модель: {model:<55}                                            ║")
     print("╚══════════════════════════════════════════════════════════════════╝\n")
 
     persona = Personality(
